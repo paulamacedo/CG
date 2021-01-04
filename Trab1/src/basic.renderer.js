@@ -44,6 +44,47 @@
             var P1 = [vert[1][0], vert[1][1]];
             var P2 = [vert[2][0], vert[2][1]];
     
+	    	
+	/*
+		//Coordenadas dos vértices
+            var P0 = [vert[0][0], vert[0][1]];
+            var P1 = [vert[1][0], vert[1][1]];
+            var P2 = [vert[2][0], vert[2][1]];
+            
+            //Verifica a existência da propriedade xform
+            if( primitive.hasOwnProperty('xform')){
+                //Acrescenta uma coordenada homogênea
+                var P00 = [vert[0][0], vert[0][1], 1];
+                var P11 = [vert[1][0], vert[1][1], 1];
+                var P22 = [vert[2][0], vert[2][1], 1];
+                function aplicaAfim(ponto){
+                    var m = primitive.xform;
+                    var somaprod;
+                    var pontos;
+                    // Realiza a multiplicação da matriz da composição das transformações afins e o ponto
+                    for(let i = 0 ; i < 3 ; i++){
+                        for(let j =0 ; j < 1 ; j++){
+                            somaprod=0;
+                            for(k=0; k<3; k++) {
+                                somaprod+=m[i][k]*ponto[k][j];
+                                pontos[i][j]= somaprod;
+                            }
+                        }
+                    }
+                    // Retorna o ponto após a tranformação 
+                    return ponto = [pontos[0][0], pontos[1][0]] 
+                }
+                //Atualiza os pontos 
+                P0 = aplicaAfim(P00);
+                P1 = aplicaAfim(P01);
+                P2 = aplicaAfim(P02);
+            }
+	
+	
+	
+	
+	*/	
+		
             //Normais
             var n0 = normVect(P0, P1);
             var n1 = normVect(P1, P2);
